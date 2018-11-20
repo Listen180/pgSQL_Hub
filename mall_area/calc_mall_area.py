@@ -47,16 +47,14 @@ def tick_end (contex=''):
 
 
 ## Data base configuration 
-host_adress = '47.93.89.177'
-port_adress = '3433'
-db_name = 'meg'
+host_adress = input("Please input the host adress: ")
+port_adress = input("Please input the port adress: ")
+db_name = input("Please input DB name: ")
 
 
-username = input("Please input your user name on DB (meg): ")
+username = input("Please input your user name on DB: ")
 passcode = gp.getpass("Please input your passcode: ")
 
-username = 'postgres'
-passcode = '099PyWcP7&p9'
 
 def pgconn():
     address = 'postgresql://' + username + ':' + passcode + '@' + host_adress + ':' + port_adress + '/' + db_name
